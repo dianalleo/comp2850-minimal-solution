@@ -1,7 +1,11 @@
-<ul id="task-list" aria-describedby="result-count">
+<p id="task-count" role="status" aria-live="polite">
+  Showing {{ page.items|length }}
+  task{% if page.items|length != 1 %}s{% endif %}
+  {% if query %} matching "{{ query }}"{% endif %}
+</p>
+
+<ul id="task-list">
   {% for task in page.items %}
     {% include "tasks/_item.peb" with {"task": task} %}
   {% endfor %}
 </ul>
-<p id="result-count" class="visually-hidden">Showing {{ page.items|length }} of {{ page.totalItems }}{% if query %} matching "{{ query }}"{% endif %}</p>
-

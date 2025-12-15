@@ -180,6 +180,17 @@ select:focus {
   opacity: 0.7;
 }
 
+.default-button {
+  all: unset;                 /* remove all default link styles */
+  display: inline-block;      /* behave like a button */
+  padding: 2px 6px;           /* default button padding */
+  border: 2px inset buttonface; /* default button border */
+  font: menu;                 /* default button font */
+  cursor: pointer;            /* show pointer on hover */
+  text-align: center;
+}
+
+
 .task-item.completed .task-title {
   text-decoration: line-through;
   color: var(--pico-muted-color, #666);
