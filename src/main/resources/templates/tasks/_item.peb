@@ -12,7 +12,7 @@
 
 <form action="/tasks/{{ task.id }}/delete" method="post" style="display: inline;"
       onsubmit="return confirm('Delete the task \'{{ task.title }}\'?');">
-    <button type="submit" class="default-button" aria-label="Delete task: {{ task.title }}">
+    <button type="submit" aria-label="Delete task: {{ task.title }}">
         Delete
     </button>
 </form>
